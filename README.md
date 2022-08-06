@@ -1,2 +1,3 @@
 # Speed-Unit-Converter
-I learning python for three days and this is my first project.
+I learned python for three days and this is my first project.
+This python script could convert km/h to m/s,also can upside down.
