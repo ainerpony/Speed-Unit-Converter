@@ -17,7 +17,7 @@ if i == str(1) or i == str(2):
             break
         else:
             print("Enter number only")
-            #time.sleep(1)
+
 if i == str(1):
     o = float(s)*10/36
 elif i == str(2):
@@ -29,4 +29,3 @@ if i == str(1) or i == str(2):
     print("Exact: ",e,"m/s")
 else:
     print("\n",error,"\n")
-    time.sleep(1)
