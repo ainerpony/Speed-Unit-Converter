@@ -1,34 +1,32 @@
+import time
 from decimal import Decimal
 
 print("\n","*"*14,"\n"" 1.km/h to m/s\n"" 2.m/s to km/h\n","*"*14,"\n")
+error = "No option"
 
-i = None
-s = None
-
-while not i:
-    i = input(" Select: ")
-
-if i == str("1"):
-    while not s:
-        s = input(" Speed : ")
-    if str.isdigit(s) or str.isdigit(s.replace(".","0")) == True:
-        o = float(s)*10/36
-        print("\n"" About: "+str(int(o))+"m/s")
-        e = Decimal(o).quantize(Decimal("0.01"))
-        print(" Exact: "+str(e)+"m/s")
+while True:
+    i = input("Select: ")
+    if str.isdigit(i):
+        break
     else:
-        print("\n""Check your input!")
+        print("Enter number only")
+if i == str(1) or i == str(2):
+    while True:
+        s = input("Speed: ")
+        if str.isdigit(s) or str.isdigit(s.replace(".","")):
+            break
+        else:
+            print("Enter number only")
+            #time.sleep(1)
+if i == str(1):
+    o = float(s)*10/36
+elif i == str(2):
+    o = float(s)*3.6
 
-elif i == str("2"):
-    while not s:
-        s = input(" Speed : ")
-    if str.isdigit(s) or str.isdigit(s.replace(".","")) == True:
-        o = float(s)*3.6
-        print("\n"" About: "+str(int(o))+"km/h")
-        e = Decimal(o).quantize(Decimal("0.01"))
-        print(" Exact: "+str(e)+"km/h")
-    else:
-        print("\n""Chack your input!")
-
+if i == str(1) or i == str(2):
+    e = Decimal(o).quantize(Decimal("0.01"))
+    print("\n""About: ",int(o),"m/s")
+    print("Exact: ",e,"m/s")
 else:
-    print("Check your input!")
+    print("\n",error,"\n")
+    time.sleep(1)
