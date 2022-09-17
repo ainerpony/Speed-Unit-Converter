@@ -14,7 +14,7 @@ if i == str(1) or i == str(2):
     while True:
         s = input("Speed: ")
         if str.isdigit(s) or str.isdigit(s.replace(".","")):
-            if s.count(".") < 1:
+            if s.count(".") < 2:
                 break
         else:
             print("Enter number only")
