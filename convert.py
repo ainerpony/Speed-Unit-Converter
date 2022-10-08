@@ -1,4 +1,3 @@
-import time
 from decimal import Decimal
 
 print("\n","*"*14,"\n"" 1.km/h to m/s\n"" 2.m/s to km/h\n","*"*14,"\n")
@@ -26,9 +25,10 @@ if i == str(1):
 elif i == str(2):
     o = float(s)*3.6
 
-if i == str(1) or i == str(2):
-    e = Decimal(o).quantize(Decimal("0.01"))
-    print("\n""About: ",int(o),"m/s")
-    print("Exact: ",e,"m/s")
+e = Decimal(o).quantize(Decimal("0.01"))
+if i == str(1):
+    print("\n""About: ",int(o),"m/s\n""Exact: ",e,"m/s")
+if i == str(2):
+    print("\n""About: ",int(o),"km/h\n""Exact: ",e,"km/h")
 else:
     print("\n",error,"\n")
