@@ -28,7 +28,7 @@ elif i == str(2):
 e = Decimal(o).quantize(Decimal("0.01"))
 if i == str(1):
     print("\n""About: ",int(o),"m/s\n""Exact: ",e,"m/s")
-if i == str(2):
+elif i == str(2):
     print("\n""About: ",int(o),"km/h\n""Exact: ",e,"km/h")
 else:
     print("\n",error,"\n")
