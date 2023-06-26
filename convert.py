@@ -6,7 +6,10 @@ error = "No option"
 while True:
     i = input("Select: ")
     if str.isdigit(i):
-        break
+        if i == "1" or i == "2":
+            break
+        else:
+            print(error)
     else:
         print("Enter number only")
 if i == str(1) or i == str(2):
